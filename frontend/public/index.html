@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SmartAgro — AI Farm Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>"/>
+  <style>
+    body{margin:0;background:#f0fdf4;font-family:Inter,sans-serif}
+    #root-load{
+      position:fixed;inset:0;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      background:linear-gradient(135deg,#0f172a,#064e3b);
+      color:#d1fae5;font-family:Georgia,serif;gap:18px;
+      transition:opacity .4s;
+    }
+    #root-load h1{font-size:2rem;margin:0}
+    #root-load h1 em{color:#34d399;font-style:normal}
+    #root-load p{margin:0;font-size:.85rem;color:#6b7280;font-family:sans-serif}
+    .ld{width:36px;height:36px;border:3px solid #1e3a2a;border-top-color:#10b981;border-radius:50%;animation:sp .8s linear infinite}
+    @keyframes sp{to{transform:rotate(360deg)}}
+  </style>
+</head>
+<body>
+  <div id="root-load">
+    <div class="ld"></div>
+    <h1>Smart<em>Agro</em></h1>
+    <p>AI-Powered Farm Intelligence</p>
+  </div>
+  <div id="root"></div>
+  <script>
+    window.addEventListener('load',function(){
+      setTimeout(function(){
+        var l=document.getElementById('root-load');
+        if(l){l.style.opacity='0';setTimeout(function(){l.remove()},400);}
+      },500);
+    });
+  </script>
+</body>
+</html>

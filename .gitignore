@@ -1,0 +1,56 @@
+# =============================================
+# SmartAgro — .gitignore
+# =============================================
+
+# ----- Python / Backend -----
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+*.egg-info/
+dist/
+build/
+.Python
+
+# ML model files (too large for GitHub — train locally or use Git LFS)
+backend/plant_disease_cnn.h5
+backend/crop_rf.pkl
+backend/crop_le.pkl
+
+# Database (local data — not for source control)
+backend/smartagro.db
+backend/*.db
+
+# Training data (download from Kaggle separately)
+backend/Crop_recommendation.csv
+backend/plantvillage/
+
+# ----- Environment / Secrets -----
+backend/.env
+frontend/.env
+.env
+.env.local
+.env.*.local
+
+# ----- Node / Frontend -----
+frontend/node_modules/
+frontend/build/
+frontend/.pnp
+frontend/.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----- OS / Editor -----
+.DS_Store
+Thumbs.db
+*.lnk
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----- Misc -----
+{backend,frontend}/
